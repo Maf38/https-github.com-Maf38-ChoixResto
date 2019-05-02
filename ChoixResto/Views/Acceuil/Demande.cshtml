@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Demande</title>
+</head>
+<body>
+    <div>Je suis la vue i</div>
+    <input type="text" id="nom" value="@Model.Resto.Nom" />
+
+
+    <input type="text" id="telephone" value="@Model.Resto.Telephone" />
+
+    <br />
+    @Html.Label("estMajeur", "Cochez la case si vous êtes majeur")
+    @Html.CheckBox("estMajeur", true)
+    <br />
+    <input type="submit" value="Envoyer" />
+    <br />
+  
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿
+@model ChoixResto.ViewModels.AccueilViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Views/ListeResto/StyleSimpleByMaf.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div>
+        <h1> Je suis la vue Index</h1>
+    </div>
+
+    <div>Je suis la vue index</div>
+    @{Html.BeginForm("Index", "ListeResto");}
+    @Html.Label("estMajeur", "Cochez la case si vous êtes <strong>majeur</strong>")
+    @Html.CheckBox("estMajeur", true)
+    <input type="submit" value="Envoyer" />
+    @{Html.EndForm();}
+
+    @*Premiere methode pas tres lisible...cf tuto sur openclassroom
+            <ul>
+            <li>@ViewData["message"]</li>
+            <li>@(((DateTime)ViewData["date"]).ToString("dd/MM/yyyy"))</li>
+            <li>@(((ChoixResto.Models.Resto)ViewData["resto"]).Nom)</li>
+            <li>@(((ChoixResto.Models.Resto)ViewData["resto"]).Telephone)</li>
+        </ul>*@
+
+    @*Seconde façon de proceder!!!!*@
+    <ul>
+        <li>@Model.Message</li>
+        <li>@Model.Date.ToString("dd/MM/yyyy")</li>
+        <li>@Model.Resto.Nom</li>
+        <li>@Model.Resto.Telephone</li>
+    </ul>
+
+</body>
+</html>

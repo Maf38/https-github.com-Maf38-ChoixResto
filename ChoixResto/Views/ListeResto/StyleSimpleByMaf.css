@@ -1,0 +1,18 @@
+﻿
+
+
+table {
+    border-collapse: collapse;
+}
+
+td, th, li {
+    border: 5px solid black;
+}
+
+
+.maDiv {
+    width: 200px; /* 200 pixels de large */
+    background-color: cyan; /* couleur d'arrière-fond de la div */
+    padding: 10px; /* marge exterieure de 10 pixels */
+    margin: 20px; /* marge interieur de 20 pixels */
+}

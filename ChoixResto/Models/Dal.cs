@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
@@ -140,18 +141,26 @@ namespace ChoixResto.Models
         public bool ADejaVote(int idSondage, string idUtilisateur)
         {
             bool result = false;
-            Sondage currentSondage = bdd.Sondages.First(Sondage => Sondage.Id == idSondage);
-
-            if (currentSondage != null)
+            try
             {
-                foreach (Vote vote in currentSondage.Votes)
+                Sondage currentSondage = bdd.Sondages.First(Sondage => Sondage.Id == idSondage);
+                Debug.WriteLine("========= trace test sondage ====== " + currentSondage.Id.ToString());
+
+                if (currentSondage != null)
                 {
-                    if (vote.Utilisateur.Id.Equals(idUtilisateur))
+                    foreach (Vote vote in currentSondage.Votes)
                     {
-                        result = true;
-                        break;
+                        if (vote.Utilisateur.Id.ToString().Equals(idUtilisateur))
+                        {
+                            result = true;
+                            break;
+                        }
                     }
                 }
+            }
+            catch
+            {
+
             }
 
             return result;
@@ -168,11 +177,8 @@ namespace ChoixResto.Models
             Sondage sondage = new Sondage { Date = DateTime.Now };
             bdd.Sondages.Add(sondage);
 
-            bdd.SaveChanges();
-
-           
+            bdd.SaveChanges();       
             
-
             return sondage.Id;
         }
 

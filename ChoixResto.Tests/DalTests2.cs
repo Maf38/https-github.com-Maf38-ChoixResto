@@ -275,6 +275,7 @@ namespace ChoixResto.Tests
 
                 dal.CreerRestaurant("La bonne fourchette", "01 02 03 04 05");
                 dal.CreerRestaurant("le resto bulle d o", "00 00 00 00");
+
                 dal.ModifierRestaurant(1, "La bonne cuillère", "01 02 03 04 05");
 
 
@@ -283,9 +284,9 @@ namespace ChoixResto.Tests
 
                 Assert.IsNotNull(restos);
 
-                //Assert.AreEqual(7, restos.Count);
+                Assert.AreEqual(2, restos.Count);
 
-                Assert.AreEqual("La bonne fourchette", restos[2].Nom);
+                Assert.AreEqual("La bonne cuillère", restos[0].Nom);
 
                 Assert.AreEqual("01 02 03 04 05", restos[0].Telephone);
 

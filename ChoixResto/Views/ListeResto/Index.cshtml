@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Views/ListeResto/StyleSimpleByMaf.css" rel="stylesheet" />
+
+    <link href="~/Views/ListeResto/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="maDiv">Je suis la vue ListeResto</div>
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Téléphone</th>
+        </tr>
+
+
+        @*
+            @{
+                foreach (var resto in Model.ListeDesRestos)
+                {
+                    <tr>
+                        <td>@resto.Nom</td>
+                        <td>@resto.Telephone</td>
+                    </tr>
+                }
+            }*@
+    </table>
+    @Html.DropDownList("RestoChoisi", (SelectList)ViewBag.ListeDesRestos)
+
+
+   @* TODO : comprendre pourquoi cette expression lambda ne fonctionne pas...
+       
+       @Html.TextBoxFor(model => model.Resto.Nom)
+
+       *@
+</html>
