@@ -125,6 +125,8 @@
     <Content Include="Views\Acceuil\ViewTest.cshtml" />
     <Content Include="Views\ListeResto\Index.cshtml" />
     <Content Include="Views\Acceuil\Demande.cshtml" />
+    <Content Include="Views\Acceuil\Connexion.cshtml" />
+    <Content Include="Views\Acceuil\AfficheListeRestaurant.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

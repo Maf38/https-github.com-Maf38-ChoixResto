@@ -26,6 +26,10 @@
     <input type="submit" value="Envoyer" />
     @{Html.EndForm();}
 
+    @Html.Partial("Connexion", Model)
+
+    @Html.Action("AfficheListeRestaurant")
+
     @*Premiere methode pas tres lisible...cf tuto sur openclassroom
             <ul>
             <li>@ViewData["message"]</li>

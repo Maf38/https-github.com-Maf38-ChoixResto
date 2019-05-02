@@ -18,10 +18,24 @@ namespace ChoixResto.Controllers
             {
                 Message = "Bonjour depuis le contrôleur",
                 Date = DateTime.Now,
-                Resto = new Resto { Nom = "La bonne fourchette", Telephone = "1234" }
+                Resto = new Resto { Nom = "La bonne fourchette", Telephone = "1234" },
+                Login = "Mafal"
             };
 
             return View(vm);
+        }
+
+        [ChildActionOnly]
+        public ActionResult AfficheListeRestaurant()
+        {
+            List<Models.Resto> listeDesRestos = new List<Resto>
+        {
+            new Resto { Id = 1, Nom = "Resto pinambour", Telephone = "1234" },
+            new Resto { Id = 2, Nom = "Resto tologie", Telephone = "1234" },
+            new Resto { Id = 5, Nom = "Resto ride", Telephone = "5678" },
+            new Resto { Id = 9, Nom = "Resto toro", Telephone = "555" },
+        };
+            return PartialView(listeDesRestos);
         }
 
         public ActionResult Demande()
