@@ -95,6 +95,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Views\ListeResto\StyleSheet1.css" />
     <Content Include="Views\ListeResto\StyleSimpleByMaf.css" />
     <Content Include="Web.config" />
@@ -103,12 +108,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AcceuilController.cs" />
     <Compile Include="Controllers\ListeRestoController.cs" />
+    <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BddContext.cs" />
     <Compile Include="Models\Dal.cs" />
     <Compile Include="Models\IDal.cs" />
+    <Compile Include="Models\Init\Class1.cs" />
     <Compile Include="Models\Resto.cs" />
     <Compile Include="Models\Resultats.cs" />
     <Compile Include="Models\Sondage.cs" />
@@ -127,6 +134,12 @@
     <Content Include="Views\Acceuil\Demande.cshtml" />
     <Content Include="Views\Acceuil\Connexion.cshtml" />
     <Content Include="Views\Acceuil\AfficheListeRestaurant.cshtml" />
+    <Content Include="Views\Restaurant\Index.cshtml" />
+    <Content Include="Views\Restaurant\ModifierRestaurant.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Restaurant\CreerRestaurant.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

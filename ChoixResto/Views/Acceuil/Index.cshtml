@@ -37,14 +37,13 @@
             <li>@(((ChoixResto.Models.Resto)ViewData["resto"]).Nom)</li>
             <li>@(((ChoixResto.Models.Resto)ViewData["resto"]).Telephone)</li>
         </ul>*@
-
-    @*Seconde façon de proceder!!!!*@
+    @*
     <ul>
         <li>@Model.Message</li>
         <li>@Model.Date.ToString("dd/MM/yyyy")</li>
         <li>@Model.Resto.Nom</li>
         <li>@Model.Resto.Telephone</li>
     </ul>
-
+    *@
 </body>
 </html>

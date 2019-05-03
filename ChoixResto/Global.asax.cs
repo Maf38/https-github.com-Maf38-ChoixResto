@@ -1,5 +1,8 @@
+using ChoixResto.Models;
+using ChoixResto.Models.Init;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +16,10 @@ namespace ChoixResto
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            IDatabaseInitializer<BddContext> init = new InitChoixResto();
+            Database.SetInitializer(init);
+            init.InitializeDatabase(new BddContext());
         }
     }
 }

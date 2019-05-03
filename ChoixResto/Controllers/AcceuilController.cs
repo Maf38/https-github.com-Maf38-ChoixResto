@@ -13,16 +13,9 @@ namespace ChoixResto.Controllers
         // GET: Acceuil
         public ActionResult Index()
         {
-                       
-            AccueilViewModel vm = new AccueilViewModel
-            {
-                Message = "Bonjour depuis le contrôleur",
-                Date = DateTime.Now,
-                Resto = new Resto { Nom = "La bonne fourchette", Telephone = "1234" },
-                Login = "Mafal"
-            };
+           
 
-            return View(vm);
+            return View();
         }
 
         [ChildActionOnly]
